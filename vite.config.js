@@ -7,5 +7,5 @@ export default defineConfig({
   build: {
     outDir: "dist", // Make sure the output directory is correct (this should be 'dist')
   },
-  base: "/disha295.github.io-Portfolio/",
+  base: "/",
 });
