@@ -8,7 +8,6 @@ const About = () => {
   const images = [
     "/img/Disha1.jpeg",
     "/img/Disha2.jpeg",
-    "/img/Disha3.jpeg",
     "/img/Disha4.jpeg",
     "/img/Disha5.jpeg",
     "/img/Disha6.jpeg",

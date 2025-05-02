@@ -30,9 +30,9 @@ const Footer = () => {
             href="public/doc/DishaShetiya.pdf"
             target="_blank"
             rel="noreferrer"
-            className="text-sm font-medium footer-hover-btn"
+            className="footer-hover-btn"
           >
-            My Career in One Page ↗
+            My Career in One Page↗
           </a>
 
           <div className="flex gap-6">

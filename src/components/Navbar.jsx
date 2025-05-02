@@ -42,10 +42,10 @@ const NavBar = () => {
   return (
     <div
       ref={navContainerRef}
-      className="fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6"
+      className="fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6 "
     >
       <header className="absolute top-1/2 w-full -translate-y-1/2">
-        <nav className="flex size-full items-center justify-between p-4">
+        <nav className="flex size-full items-center justify-between px-6">
           {/* Logo / Home Button */}
           <div className="flex items-center gap-7">
             <Link
@@ -60,20 +60,16 @@ const NavBar = () => {
             </Link>
           </div>
 
-          {/* Navigation Links */}
+          {/* Navigation Buttons */}
           <div className="flex h-full items-center">
             <div className="hidden md:flex gap-6">
               {navItems.map(({ label, path }) => (
-                <Link
-                  key={label}
-                  to={path}
-                  className={`nav-hover-btn ${
-                    location.pathname === path
-                      ? "text-blue-600 font-semibold"
-                      : ""
-                  }`}
-                >
-                  {label}
+                <Link key={label} to={path}>
+                  <Button
+                    id="product-button"
+                    title={label}
+                    containerClass="md:flex hidden items-center justify-center gap-1"
+                  />
                 </Link>
               ))}
             </div>

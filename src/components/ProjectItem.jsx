@@ -29,33 +29,37 @@ const ProjectItem = ({
   }, []);
 
   return (
-    <div ref={containerRef} className="project-section px-6 md:px-16 py-12">
+    <div ref={containerRef} className="project-section px-6 md:px-12 py-12">
       <span className="text-sm font-medium text-pink-800">{year}</span>
       <div className="mt-1">
-        <h3 className="text-xl md:text-2xl font-medium text-gray-900">
-          <span className="text-black">{title}</span> ・ <strong>{role}</strong>
+        <h3 className=" md:text-3xl font-medium text-gray-900">
+          <span className="text-black">
+            <strong>{title}</strong>
+          </span>
+          <br />
+          <span className="text-sm">{role}</span>
         </h3>
       </div>
       <p className="text-black mt-3 max-w-4xl text-base">{description}</p>
 
       {/* Media Container with Button */}
       <div className="relative mt-6 overflow-hidden border border-gray-200 rounded-xl group">
-        <div className="flex items-center justify-center aspect-[16/10] w-full">
+        <div className="relative w-full h-96">
+          {" "}
+          {/* Fixed height for container */}
           {lottie ? (
-            <div className="w-[100%] h-[80%]">
-              <Lottie
-                animationData={lottie}
-                lottieRef={lottieRef}
-                loop={true}
-                autoplay={false}
-                className="w-full h-full object-contain"
-              />
-            </div>
+            <Lottie
+              animationData={lottie}
+              lottieRef={lottieRef}
+              loop={true}
+              autoplay={false}
+              className="w-full h-full object-cover absolute inset-0"
+            />
           ) : (
             <img
               src={image}
               alt={title}
-              className="w-full h-full object-contain rounded-xl"
+              className="w-full h-full object-cover rounded-xl"
             />
           )}
         </div>

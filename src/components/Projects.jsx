@@ -39,6 +39,9 @@ const Projects = () => {
   return (
     <section className="bg-white overflow-visible">
       <div className="bg-[#dfdff0] rounded-t-3xl px-6 md:px-12 py-10">
+        <h2 className="text-4xl font-bold mb-4 text-pink-800 px-8 mt-4">
+          Featured Work
+        </h2>
         {topProjects.map((proj, index) => (
           <div
             key={index}

@@ -29,7 +29,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 
 const techCategories = [
   {
-    title: "Languages & ML",
+    title: "Languages",
     items: [
       { icon: <FaPython />, label: "Python" },
       { icon: <SiCplusplus />, label: "C++" },

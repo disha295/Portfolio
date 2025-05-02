@@ -4,7 +4,7 @@ import Reco from "../assets/Showreel_-Web-gallery-[remix].json";
 const allProjects = [
   {
     year: "2025",
-    title: "HeartTrend: Data-Driven Health Trends and Lifestyle Nudges",
+    title: "HeartTrend",
     role: "Personal Project",
     description:
       "HeartTrend is a personal health analytics dashboard that visualizes long-term Apple Health data like HR, HRV, and ECGs. It translates raw signals into reflective insights and personalized lifestyle nudges for better well-being.",
