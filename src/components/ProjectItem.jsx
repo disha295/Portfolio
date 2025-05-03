@@ -44,22 +44,23 @@ const ProjectItem = ({
 
       {/* Media Container with Button */}
       <div className="relative mt-6 overflow-hidden border border-gray-200 rounded-xl group">
-        <div className="relative w-full h-96">
+        <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
           {" "}
-          {/* Fixed height for container */}
+          {/* Aspect ratio of 16:9 */}
+          {/* This makes the container maintain a 16:9 ratio */}
           {lottie ? (
             <Lottie
               animationData={lottie}
               lottieRef={lottieRef}
               loop={true}
               autoplay={false}
-              className="w-full h-full object-cover absolute inset-0"
+              className="absolute inset-0 w-full h-full object-contain"
             />
           ) : (
             <img
               src={image}
               alt={title}
-              className="w-full h-full object-cover rounded-xl"
+              className="absolute inset-0 w-full h-full object-contain rounded-xl"
             />
           )}
         </div>
