@@ -11,10 +11,12 @@ import Intro from "./components/intro.jsx";
 const Home = () => (
   <>
     <Navbar />
-    <Hero />
-    <Intro />
-    <Projects />
-    <Footer />
+    <div className="w-full max-w-[100vw]">
+      <Hero />
+      <Intro />
+      <Projects />
+      <Footer />
+    </div>
   </>
 );
 
@@ -22,7 +24,7 @@ const App = () => {
   const location = useLocation();
 
   return (
-    <main className="relative min-h-screen w-screen overflow-x-hidden">
+    <main className="relative min-h-screen w-screen overflow-x-hidden bg-white">
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route
@@ -48,8 +50,10 @@ const App = () => {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
               >
                 <Navbar />
-                <Work />
-                <Footer />
+                <div className="w-full max-w-screen-2xl mx-auto">
+                  <Work />
+                  <Footer />
+                </div>
               </motion.div>
             }
           />
@@ -63,8 +67,10 @@ const App = () => {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
               >
                 <Navbar />
-                <About />
-                <Footer />
+                <div className="w-full max-w-screen-2xl mx-auto">
+                  <About />
+                  <Footer />
+                </div>
               </motion.div>
             }
           />

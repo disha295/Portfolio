@@ -30,8 +30,7 @@ const Hero = () => {
   };
 
   useEffect(() => {
-    runFastFontCycle(); // run once initially
-
+    runFastFontCycle();
     return () => {
       clearInterval(intervalRef.current);
       clearTimeout(timeoutRef.current);
@@ -40,13 +39,14 @@ const Hero = () => {
 
   return (
     <section
-      className="relative h-screen w-full overflow-hidden cursor-pointer bg-black"
+      className="relative w-full h-screen overflow-hidden bg-black cursor-pointer"
       onClick={runFastFontCycle}
+      onTouchStart={runFastFontCycle}
     >
-      {/* 🎥 Video */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-[center_top] sm:object-center"
           src="/videos/Hero1.mp4"
           autoPlay
           muted
@@ -55,27 +55,30 @@ const Hero = () => {
         />
       </div>
 
-      {/* 🌫 Overlay */}
-      <div className="absolute inset-0 bg-black opacity-50 backdrop-blur-sm z-10" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black opacity-50 z-10" />
 
-      {/* 📝 Text at Bottom */}
-      <div className="absolute bottom-10 left-0 right-0 z-20 flex flex-col items-center text-center px-4">
+      {/* Content */}
+      <div className="absolute bottom-6 left-0 right-0 z-20 flex flex-col items-center text-center px-4 sm:px-6">
         <h1
-          className={`${fonts[fontIndex]} text-[clamp(2.5rem,7vw,10rem)] text-white tracking-tight leading-none whitespace-nowrap`}
+          className={`${fonts[fontIndex]} text-white text-[clamp(2.25rem,6vw,4.5rem)] tracking-tight leading-tight`}
         >
           Disha Vishal Shetiya
         </h1>
-        <p className="mt-4 text-white text-base sm:text-lg font-robert-regular max-w-2xl">
+
+        <p className="mt-3 text-white text-sm sm:text-base md:text-lg max-w-xs sm:max-w-md md:max-w-xl">
           Machine learning engineer crafting intelligent pipelines for scalable
           AI solutions.
         </p>
 
-        <Button
-          id="product-button"
-          title="MY CAREER IN ONE PAGE ↗"
-          href="/doc/DishaShetiya.pdf"
-          containerClass="md:flex hidden items-center justify-center gap-1 mt-6"
-        />
+        <div className="mt-5">
+          <Button
+            id="product-button"
+            title="MY CAREER IN ONE PAGE ↗"
+            href="/doc/DishaShetiya.pdf"
+            containerClass="flex items-center justify-center gap-2"
+          />
+        </div>
       </div>
     </section>
   );

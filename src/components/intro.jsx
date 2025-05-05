@@ -33,14 +33,17 @@ const Intro = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="bg-white px-6 py-20">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 items-start">
-        {/* Left Column: Nutshell Text */}
-        <div ref={textRef} className="md:w-1/2">
-          <h2 className="text-3xl md:text-4xl font-bold text-pink-800 mb-4 tracking-tight">
+    <section
+      ref={containerRef}
+      className="bg-white px-4 sm:px-6 lg:px-12 py-16 sm:py-24"
+    >
+      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row gap-10 md:gap-16 items-start">
+        {/* Left Column: Text */}
+        <div ref={textRef} className="w-full md:w-1/2">
+          <h2 className="text-3xl sm:text-4xl font-bold text-pink-800 mb-4 tracking-tight leading-tight">
             In a nutshell...
           </h2>
-          <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
             As a machine learning engineer, I integrate data science with
             thoughtful design to create intelligent, impactful systems. My work
             is driven by curiosity and the challenge of turning raw ideas into
@@ -52,7 +55,7 @@ const Intro = () => {
         </div>
 
         {/* Right Column: Tech Icons */}
-        <div className="md:w-1/2" ref={techRef}>
+        <div ref={techRef} className="w-full md:w-1/2">
           <TechIcons />
         </div>
       </div>

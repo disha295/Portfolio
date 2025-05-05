@@ -28,6 +28,7 @@ const Work = () => {
             start: "top 90%",
             end: "top 40%",
             scrub: true,
+            once: true,
           },
         }
       );
@@ -38,12 +39,12 @@ const Work = () => {
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
-      <section className="px-6 py-24 max-w-7xl mx-auto">
-        <h1 className="text-4xl font-Stardom-Regular font-semibold mb-16 text-center">
+      <section className="px-4 sm:px-6 lg:px-8 py-20 max-w-6xl mx-auto">
+        <h1 className="text-4xl font-Stardom-Regular font-semibold mb-16 text-center font-sans">
           Projects
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12">
           {allProjects.map((proj, index) => (
             <div
               key={index}

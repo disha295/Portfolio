@@ -30,25 +30,24 @@ const ProjectItem = ({
   }, []);
 
   return (
-    <div ref={containerRef} className="project-section px-6 md:px-12 py-12">
+    <div ref={containerRef} className="project-section w-full">
       <span className="text-sm font-medium text-pink-800">{year}</span>
       <div className="mt-1">
-        <h3 className=" md:text-3xl font-medium text-gray-900">
-          <span className="text-black">
-            <strong>{title}</strong>
-          </span>
+        <h3 className="text-2xl sm:text-3xl font-medium text-black leading-snug">
+          <strong>{title}</strong>
           <br />
           <span className="text-sm">{role}</span>
         </h3>
       </div>
-      <p className="text-black mt-3 max-w-4xl text-base">{description}</p>
+      <p className="text-black mt-3 max-w-4xl text-base sm:text-lg leading-relaxed">
+        {description}
+      </p>
 
-      {/* Media Container with Button */}
       <div
-        className={`relative mt-6 border border-gray-200 rounded-xl group w-full ${
+        className={`relative mt-6 border border-gray-200 rounded-xl group w-full overflow-hidden ${
           variant === "featured"
-            ? "min-h-[500px] md:min-h-[650px]"
-            : "min-h-[300px] md:min-h-[300px]"
+            ? "min-h-[300px] sm:min-h-[400px] md:min-h-[500px]"
+            : "min-h-[250px] sm:min-h-[300px]"
         }`}
       >
         <div className="absolute inset-0 w-full h-full">
@@ -58,7 +57,7 @@ const ProjectItem = ({
               lottieRef={lottieRef}
               loop={true}
               autoplay={false}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-cover sm:object-contain"
             />
           ) : image ? (
             <img
@@ -67,7 +66,7 @@ const ProjectItem = ({
               className="w-full h-full object-contain"
             />
           ) : (
-            <div className="text-gray-400">Media unavailable</div>
+            <div className="text-gray-400 p-4">Media unavailable</div>
           )}
         </div>
 

@@ -51,7 +51,7 @@ const About = () => {
       </h1>
 
       {/* Rotating Image Carousel */}
-      <div className="relative flex justify-center items-center h-[500px]">
+      <div className="relative flex justify-center items-center h-[420px] sm:h-[500px] overflow-hidden px-2 sm:px-4">
         {visibleIndexes.map((imgIndex, i) => {
           const offset = i - 1;
           return (
@@ -60,7 +60,7 @@ const About = () => {
               src={images[imgIndex]}
               alt={`img-${imgIndex}`}
               onClick={() => rotate(offset)}
-              className="absolute w-64 h-96 object-cover rounded-2xl shadow-xl cursor-pointer"
+              className="absolute w-[180px] sm:w-64 h-[270px] sm:h-96 object-cover rounded-2xl shadow-xl cursor-pointer"
               style={getStyle(offset)}
             />
           );
@@ -69,7 +69,7 @@ const About = () => {
 
       {/* Text Section */}
       <section className="max-w-3xl mx-auto px-6 mt-20 text-left leading-relaxed text-gray-700 font-robert-medium">
-        <h2 className="text-7xl font-Pencerio-Hairline font-bold mb-6 text-center">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-Pencerio-Hairline font-bold mb-6 text-center leading-tight">
           Hi, I'm Disha!
         </h2>
         <p className="mb-6">
@@ -103,57 +103,50 @@ const About = () => {
           Professional Background
         </h3>
 
-        <div className="space-y-6">
-          {/* Experience Item */}
-          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-6">
-            {/* Left: Role and Bullet Points */}
-            <div className="flex-1">
-              <p className="font-semibold text-gray-900">Data Analyst</p>
-              <ul className="list-disc ml-5 text-sm text-gray-700 mt-1">
-                <li>Designed Tableau and QuickSight dashboards</li>
-                <li>Automated SQL & Python pipelines to scale analytics</li>
-              </ul>
-            </div>
-
-            {/* Right: Company and Dates */}
-            <div className="w-full md:w-60 text-left md:text-right mt-2 md:mt-0">
-              <p className="font-semibold text-gray-800">Innovise Technology</p>
-              <p className="text-sm text-gray-500">2025 – Present</p>
-            </div>
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10">
+          {/* Data Analyst */}
+          <div>
+            <p className="font-semibold text-gray-900">Data Analyst</p>
+            <ul className="list-disc ml-5 text-sm text-gray-700 mt-1 space-y-1">
+              <li>Designed Tableau and QuickSight dashboards</li>
+              <li>Automated SQL & Python pipelines to scale analytics</li>
+            </ul>
+          </div>
+          <div className="text-right">
+            <p className="font-semibold text-gray-800">Innovise Technology</p>
+            <p className="text-sm text-gray-500">2025 – Present</p>
           </div>
 
-          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-6">
-            <div className="flex-1">
-              <p className="font-semibold text-gray-900">
-                Machine Learning Engineer
-              </p>
-              <ul className="list-disc ml-5 text-sm text-gray-700 mt-1 ">
-                <li>Fine-tuned LLaMA3 & GPT models with TensorFlow</li>
-                <li>Deployed RAG pipelines using LangChain + ChromaDB</li>
-              </ul>
-            </div>
-            <div className="w-full md:w-60 text-left md:text-right mt-2 md:mt-0">
-              <p className="font-semibold text-gray-800">
-                University of Illinois
-              </p>
-              <p className="text-sm text-gray-500">2024 – 2025</p>
-            </div>
+          {/* ML Engineer */}
+          <div>
+            <p className="font-semibold text-gray-900">
+              Machine Learning Engineer
+            </p>
+            <ul className="list-disc ml-5 text-sm text-gray-700 mt-1 space-y-1">
+              <li>Fine-tuned LLaMA3 & GPT models with TensorFlow</li>
+              <li>Deployed RAG pipelines using LangChain + ChromaDB</li>
+            </ul>
+          </div>
+          <div className="text-right">
+            <p className="font-semibold text-gray-800">
+              University of Illinois
+            </p>
+            <p className="text-sm text-gray-500">2024 – 2025</p>
           </div>
 
-          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-6">
-            <div className="flex-1">
-              <p className="font-semibold text-gray-900">SDE Intern</p>
-              <ul className="list-disc ml-5 text-sm text-gray-700 mt-1">
-                <li>Developed REST APIs and optimized MySQL schemas</li>
-                <li>Implemented Jenkins CI/CD and Postman testing</li>
-              </ul>
-            </div>
-            <div className="w-full md:w-60 text-left md:text-right mt-2 md:mt-0">
-              <p className="font-semibold text-gray-800">
-                Ness Digital Engineering
-              </p>
-              <p className="text-sm text-gray-500">2021 – 2022</p>
-            </div>
+          {/* SDE Intern */}
+          <div>
+            <p className="font-semibold text-gray-900">SDE Intern</p>
+            <ul className="list-disc ml-5 text-sm text-gray-700 mt-1 space-y-1">
+              <li>Developed REST APIs and optimized MySQL schemas</li>
+              <li>Implemented Jenkins CI/CD and Postman testing</li>
+            </ul>
+          </div>
+          <div className="text-right">
+            <p className="font-semibold text-gray-800">
+              Ness Digital Engineering
+            </p>
+            <p className="text-sm text-gray-500">2021 – 2022</p>
           </div>
         </div>
 
