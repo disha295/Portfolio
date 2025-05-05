@@ -44,10 +44,7 @@ const ProjectItem = ({
 
       {/* Media Container with Button */}
       <div className="relative mt-6 overflow-hidden border border-gray-200 rounded-xl group">
-        <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-          {" "}
-          {/* Aspect ratio of 16:9 */}
-          {/* This makes the container maintain a 16:9 ratio */}
+        <div className="relative w-full min-h-[250px] md:min-h-[320px] rounded-xl">
           {lottie ? (
             <Lottie
               animationData={lottie}
