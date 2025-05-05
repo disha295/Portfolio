@@ -45,7 +45,7 @@ const Projects = () => {
         {topProjects.map((proj, index) => (
           <div
             key={index}
-            className={`project-section min-h-screen px-6 md:px-16 relative z-0 ${
+            className={`project-section min-h-[550px] md:min-h-[650px] px-6 md:px-12 py-12 ${
               index === topProjects.length - 1 ? "mb-0 pb-4" : ""
             }`}
             style={{ willChange: "transform, opacity", overflow: "visible" }}
