@@ -45,12 +45,12 @@ const Projects = () => {
         {topProjects.map((proj, index) => (
           <div
             key={index}
-            className={`project-section min-h-[550px] md:min-h-[650px] px-6 md:px-12 py-12 ${
+            className={`project-section min-h-[550px] md:min-h-[650px] px-6 md:px-12 py-4 ${
               index === topProjects.length - 1 ? "mb-0 pb-4" : ""
             }`}
             style={{ willChange: "transform, opacity", overflow: "visible" }}
           >
-            <ProjectItem {...proj} />
+            <ProjectItem {...proj} variant="featured" />
             {index === topProjects.length - 1 && (
               <Link to="/work" className="sm:text-lg work-hover-btn">
                 More Work →

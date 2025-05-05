@@ -47,9 +47,9 @@ const Work = () => {
           {allProjects.map((proj, index) => (
             <div
               key={index}
-              className="project-section h-auto transition duration-300 transform rounded-xl"
+              className="project-section min-h-[500px] md:min-h-[600px] px-6  transition duration-300 transform rounded-xl"
             >
-              <ProjectItem {...proj} />
+              <ProjectItem {...proj} variant="standard" />
             </div>
           ))}
         </div>

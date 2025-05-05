@@ -13,6 +13,7 @@ const ProjectItem = ({
   image,
   link,
   lottie,
+  variant = "standard",
 }) => {
   const lottieRef = useRef();
   const containerRef = useRef(null);
@@ -43,26 +44,33 @@ const ProjectItem = ({
       <p className="text-black mt-3 max-w-4xl text-base">{description}</p>
 
       {/* Media Container with Button */}
-      <div className="relative mt-6 overflow-hidden border border-gray-200 rounded-xl group">
-        <div className="relative w-full min-h-[250px] md:min-h-[320px] rounded-xl">
+      <div
+        className={`relative mt-6 border border-gray-200 rounded-xl group w-full ${
+          variant === "featured"
+            ? "min-h-[500px] md:min-h-[650px]"
+            : "min-h-[300px] md:min-h-[300px]"
+        }`}
+      >
+        <div className="absolute inset-0 w-full h-full">
           {lottie ? (
             <Lottie
               animationData={lottie}
               lottieRef={lottieRef}
               loop={true}
               autoplay={false}
-              className="absolute inset-0 w-full h-full object-contain"
+              className="w-full h-full object-contain"
             />
-          ) : (
+          ) : image ? (
             <img
               src={image}
               alt={title}
-              className="absolute inset-0 w-full h-full object-contain rounded-xl"
+              className="w-full h-full object-contain"
             />
+          ) : (
+            <div className="text-gray-400">Media unavailable</div>
           )}
         </div>
 
-        {/* Button */}
         <a
           href={link}
           target="_blank"
