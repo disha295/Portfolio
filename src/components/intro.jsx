@@ -12,24 +12,28 @@ const Intro = () => {
   const techRef = useRef(null);
 
   useEffect(() => {
-    gsap.fromTo(
-      textRef.current,
-      {
-        opacity: 0,
-        y: 40,
-      },
-      {
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 85%",
-          toggleActions: "play none none none",
+    const shouldAnimate = window.innerWidth >= 768; // Only animate on md+ screens
+
+    if (shouldAnimate) {
+      gsap.fromTo(
+        textRef.current,
+        {
+          opacity: 0,
+          y: 40,
         },
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.out",
-      }
-    );
+        {
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+        }
+      );
+    }
   }, []);
 
   return (
