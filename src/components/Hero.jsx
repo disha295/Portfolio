@@ -84,7 +84,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/50 z-10 pointer-events-none" />
 
       {/* Content */}
-      <div className="absolute inset-0 z-20 flex flex-col items-center justify-end text-center px-4 sm:px-2 pb-6">
+      <div className="absolute inset-0 z-20 flex flex-col items-center justify-end text-center sm:text-xs px-4 sm:px-2 pb-6">
         <h1
           className={`${fonts[fontIndex]} text-white text-[clamp(2.25rem,6vw,4.5rem)] tracking-tight leading-tight`}
         >
