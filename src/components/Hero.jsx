@@ -78,7 +78,7 @@ const Hero = () => {
           <Button
             id="product-button"
             title="MY CAREER IN ONE PAGE ↗"
-            href="/doc/DishaShetiya.pdf"
+            href="/public/doc/DishaShetiya.pdf"
             containerClass="flex items-center justify-center gap-2"
           />
         </div>

@@ -27,7 +27,7 @@ const Footer = () => {
         {/* Right */}
         <div className="flex flex-col items-start sm:items-end gap-2 text-gray-600">
           <a
-            href="/doc/DishaShetiya.pdf"
+            href="/public/doc/DishaShetiya.pdf"
             target="_blank"
             rel="noreferrer"
             className="footer-hover-btn text-sm sm:text-base"
