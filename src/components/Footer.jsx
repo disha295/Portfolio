@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
 
         {/* Right */}
-        <div className="flex flex-col items-end sm:items-end gap-2 text-gray-600 text-xs">
+        <div className="flex flex-col items-end gap-2 text-gray-600">
           <a
             href="/doc/DishaShetiya.pdf"
             target="_blank"

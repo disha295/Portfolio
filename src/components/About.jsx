@@ -24,9 +24,13 @@ const About = () => {
   };
 
   const getStyle = (offset) => {
-    const angle = offset * 6;
-    const x = offset * 320;
-    const y = Math.pow(offset, 2) * 10;
+    const width = window.innerWidth;
+    const isMobile = width < 640;
+    const isTablet = width < 1024;
+
+    const angle = offset * (isMobile ? 3 : 6);
+    const x = offset * (isMobile ? 120 : isTablet ? 520 : 320);
+    const y = Math.pow(offset, 2) * (isMobile ? 5 : 10);
     const scale = offset === 0 ? 1.1 : 1;
     const zIndex = 10 - Math.abs(offset);
     const grayscale = offset === 0 ? "none" : "grayscale(100%)";
@@ -60,7 +64,7 @@ const About = () => {
               src={images[imgIndex]}
               alt={`img-${imgIndex}`}
               onClick={() => rotate(offset)}
-              className="absolute w-[180px] sm:w-64 h-[270px] sm:h-96 object-cover rounded-2xl shadow-xl cursor-pointer"
+              className="absolute w-[140px] sm:w-64 h-[210px] sm:h-96 object-cover rounded-2xl shadow-xl cursor-pointer"
               style={getStyle(offset)}
             />
           );
