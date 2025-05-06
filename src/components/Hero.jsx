@@ -84,13 +84,13 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/50 z-10 pointer-events-none" />
 
       {/* Content */}
-      <div className="absolute inset-0 z-20 flex flex-col items-center justify-end text-center px-4 sm:px-6 pb-6">
+      <div className="absolute inset-0 z-20 flex flex-col items-center justify-end text-center px-4 sm:px-2 pb-6">
         <h1
           className={`${fonts[fontIndex]} text-white text-[clamp(2.25rem,6vw,4.5rem)] tracking-tight leading-tight`}
         >
           Disha Vishal Shetiya
         </h1>
-        <p className="mt-3 text-white text-sm sm:text-base md:text-lg max-w-xs sm:max-w-md md:max-w-xl">
+        <p className="mt-3 text-white text-sm sm:text-xs md:text-lg max-w-xs sm:max-w-xs md:max-w-xl">
           Machine learning engineer crafting intelligent pipelines for scalable
           AI solutions.
         </p>
