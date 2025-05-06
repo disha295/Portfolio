@@ -13,7 +13,6 @@ const fonts = [
 
 const Hero = () => {
   const [fontIndex, setFontIndex] = useState(0);
-  const [videoHeight, setVideoHeight] = useState(null);
   const videoRef = useRef(null);
   const sectionRef = useRef(null);
   const intervalRef = useRef(null);
@@ -38,45 +37,24 @@ const Hero = () => {
     };
   }, []);
 
-  // Resize logic
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 1024 && videoRef.current) {
-        setVideoHeight(videoRef.current.offsetHeight);
-      } else {
-        setVideoHeight(null);
-      }
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <section
       ref={sectionRef}
       className="relative w-full bg-black cursor-pointer"
       onClick={runFastFontCycle}
       onTouchStart={runFastFontCycle}
-      style={{
-        height: videoHeight ? `${videoHeight}px` : "100vh",
-      }}
+      style={{ height: "100vh" }}
     >
       {/* Video */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video
           ref={videoRef}
-          className="w-full h-auto object-contain lg:h-full lg:object-cover"
+          className="w-full h-full object-cover"
           src="/videos/Hero1.mp4"
           autoPlay
           muted
           loop
           playsInline
-          onLoadedMetadata={() => {
-            if (window.innerWidth < 1024 && videoRef.current) {
-              setVideoHeight(videoRef.current.offsetHeight);
-            }
-          }}
         />
       </div>
 
@@ -84,19 +62,19 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/50 z-10 pointer-events-none" />
 
       {/* Content */}
-      <div className="absolute inset-0 z-20 flex flex-col items-center justify-end text-center sm:text-xs px-4 sm:px-2 pb-6">
+      <div className="absolute inset-0 z-20 flex flex-col items-center justify-end text-center px-4 pb-6">
         <h1
-          className={`${fonts[fontIndex]} text-white text-[clamp(1.25rem,4vw,2.25rem)] sm:text-[clamp(1.5rem,5vw,3rem)] tracking-tight leading-snug`}
+          className={`${fonts[fontIndex]} text-white text-[2rem] tracking-tight leading-snug`}
         >
           Disha Vishal Shetiya
         </h1>
 
-        <p className="mt-1 text-white text-[0.7rem] sm:text-sm md:text-base max-w-[90%] sm:max-w-xs md:max-w-md">
+        <p className="mt-1 text-white text-[0.8rem] max-w-[90%]">
           Machine learning engineer crafting intelligent pipelines for scalable
           AI solutions.
         </p>
 
-        <div className="mt-2 sm:mt-3">
+        <div className="mt-2">
           <Button
             id="product-button"
             title="MY CAREER IN ONE PAGE ↗"
