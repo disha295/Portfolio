@@ -86,15 +86,15 @@ const Hero = () => {
       {/* Content */}
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-end text-center sm:text-xs px-4 sm:px-2 pb-6">
         <h1
-          className={`${fonts[fontIndex]} text-white text-[clamp(2.25rem,6vw,4.5rem)] tracking-tight leading-tight`}
+          className={`${fonts[fontIndex]} text-white text-[clamp(1.5rem,4vw,3rem)] sm:text-[clamp(2rem,5vw,4rem)] tracking-tight leading-snug`}
         >
           Disha Vishal Shetiya
         </h1>
-        <p className="mt-3 text-white text-sm sm:text-xs md:text-lg max-w-xs sm:max-w-xs md:max-w-xl">
+        <p className="mt-2 text-white text-xs sm:text-sm md:text-base max-w-[90%] sm:max-w-xs md:max-w-md">
           Machine learning engineer crafting intelligent pipelines for scalable
           AI solutions.
         </p>
-        <div className="mt-5">
+        <div className="mt-3 sm:mt-4">
           <Button
             id="product-button"
             title="MY CAREER IN ONE PAGE ↗"
