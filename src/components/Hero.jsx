@@ -86,7 +86,7 @@ const Hero = () => {
       {/* Content */}
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-end text-center sm:text-xs px-4 sm:px-2 pb-6">
         <h1
-          className={`${fonts[fontIndex]} text-white text-[clamp(1.5rem,4vw,3rem)] sm:text-[clamp(2rem,5vw,4rem)] tracking-tight leading-snug`}
+          className={`${fonts[fontIndex]} text-white text-[clamp(1.5rem,4vw,3rem)] sm:text-[clamp(1.5rem,5vw,4rem)] tracking-tight leading-snug`}
         >
           Disha Vishal Shetiya
         </h1>
