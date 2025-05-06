@@ -64,12 +64,12 @@ const Hero = () => {
       {/* Content */}
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-end text-center px-4 pb-6">
         <h1
-          className={`${fonts[fontIndex]} text-white text-[2rem] tracking-tight leading-snug`}
+          className={`${fonts[fontIndex]} text-white text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[4rem] tracking-tight leading-snug`}
         >
           Disha Vishal Shetiya
         </h1>
 
-        <p className="mt-1 text-white text-[0.8rem] max-w-[90%]">
+        <p className="mt-1 text-white text-[0.8rem] sm:text-[1rem] md:text-[1.2rem] max-w-[90%]">
           Machine learning engineer crafting intelligent pipelines for scalable
           AI solutions.
         </p>
