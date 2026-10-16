@@ -8,7 +8,7 @@ import allProjects from "../data/projects";
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
-  const topProjects = allProjects.slice(0, 3); // Always get top 3
+  const topProjects = allProjects.slice(0, 4); // Always get top 4
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);

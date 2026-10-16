@@ -14,20 +14,19 @@ const Footer = () => {
           >
             <Button
               id="footer-product-button"
-              title="Disha Vishal Shetiya"
+              title="Disha Shetiya"
               containerClass="bg-[#e8e8f5] text-black border border-gray-300 py-2 px-4 rounded-full shadow-sm hover:bg-[#e8e8f5] transition-all text-[0.75rem] sm:text-sm"
             />
           </Link>
           <p className="text-xs text-gray-500 mt-2">
-            &copy; {new Date().getFullYear()} Disha Vishal Shetiya. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} Disha Shetiya. All rights reserved.
           </p>
         </div>
 
         {/* Right */}
         <div className="flex flex-col items-start sm:items-end gap-2 text-gray-600">
           <a
-            href="/doc/DishaShetiya.pdf"
+            href="/doc/DishaShetiya-Resume.pdf"
             target="_blank"
             rel="noreferrer"
             className="footer-hover-btn text-sm sm:text-base"

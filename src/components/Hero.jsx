@@ -70,15 +70,15 @@ const Hero = () => {
         </h1>
 
         <p className="mt-1 text-white text-[0.8rem] sm:text-[1rem] md:text-[1.2rem] max-w-[90%]">
-          Machine learning engineer crafting intelligent pipelines for scalable
-          AI solutions.
+          AI engineer building and evaluating LLM and RAG systems, from
+          retrieval design to self-hosted inference.
         </p>
 
         <div className="mt-2">
           <Button
             id="product-button"
             title="MY CAREER IN ONE PAGE ↗"
-            href="/doc/DishaShetiya.pdf"
+            href="/doc/DishaShetiya-Resume.pdf"
             containerClass="flex items-center justify-center gap-2"
           />
         </div>

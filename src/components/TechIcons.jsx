@@ -1,74 +1,70 @@
 import React, { useRef, useEffect, useState } from "react";
 import {
   FaPython,
-  FaJava,
   FaDocker,
   FaReact,
   FaNode,
-  FaGithub,
   FaDatabase,
-  FaAws,
+  FaBrain,
 } from "react-icons/fa";
 import {
-  SiCplusplus,
-  SiTensorflow,
   SiPytorch,
-  SiMysql,
   SiFastapi,
-  SiNumpy,
   SiScikitlearn,
-  SiKeras,
   SiPostgresql,
-  SiMongodb,
-  SiJupyter,
   SiGit,
-  SiGooglecloud,
-  SiPandas,
+  SiTypescript,
+  SiMeta,
+  SiLangchain,
+  SiHuggingface,
+  SiDuckdb,
+  SiJenkins,
+  SiNextdotjs,
 } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 
+// Keep in sync with the skills section of the resume (public/doc/DishaShetiya-Resume.pdf).
 const techCategories = [
   {
     title: "Languages",
     items: [
       { icon: <FaPython />, label: "Python" },
-      { icon: <SiCplusplus />, label: "C++" },
-      { icon: <FaJava />, label: "Java" },
-      { icon: <IoLogoJavascript />, label: "JavaScript" },
       { icon: <FaDatabase />, label: "SQL" },
+      { icon: <SiTypescript />, label: "TypeScript" },
+      { icon: <IoLogoJavascript />, label: "JavaScript" },
     ],
   },
   {
-    title: "Web Development",
+    title: "LLM & ML",
     items: [
+      { icon: <SiMeta />, label: "Llama 3" },
+      { icon: <FaBrain />, label: "Qwen2.5" },
+      { icon: <SiLangchain />, label: "LangChain" },
+      { icon: <FaDatabase />, label: "FAISS" },
+      { icon: <FaDatabase />, label: "ChromaDB" },
+      { icon: <SiPytorch />, label: "PyTorch" },
+      { icon: <SiScikitlearn />, label: "scikit-learn" },
+      { icon: <SiHuggingface />, label: "Hugging Face" },
+    ],
+  },
+  {
+    title: "Data & Infra",
+    items: [
+      { icon: <FaDocker />, label: "Docker" },
+      { icon: <SiJenkins />, label: "Jenkins" },
+      { icon: <SiGit />, label: "Git" },
+      { icon: <SiDuckdb />, label: "DuckDB" },
+      { icon: <SiPostgresql />, label: "PostgreSQL" },
+    ],
+  },
+  {
+    title: "Full Stack",
+    items: [
+      { icon: <SiNextdotjs />, label: "Next.js" },
       { icon: <FaReact />, label: "React" },
+      { icon: <FaReact />, label: "React Native" },
       { icon: <FaNode />, label: "Node.js" },
       { icon: <SiFastapi />, label: "FastAPI" },
-      { icon: <SiMysql />, label: "MySQL" },
-      { icon: <SiPostgresql />, label: "PostgreSQL" },
-      { icon: <SiMongodb />, label: "MongoDB" },
-      { icon: <FaDocker />, label: "Docker" },
-    ],
-  },
-  {
-    title: "ML & Data Science",
-    items: [
-      { icon: <SiTensorflow />, label: "TensorFlow" },
-      { icon: <SiPytorch />, label: "PyTorch" },
-      { icon: <SiScikitlearn />, label: "Scikit-learn" },
-      { icon: <SiKeras />, label: "Keras" },
-      { icon: <SiJupyter />, label: "Jupyter" },
-      { icon: <SiNumpy />, label: "NumPy" },
-      { icon: <SiPandas />, label: "Pandas" },
-    ],
-  },
-  {
-    title: "Tools",
-    items: [
-      { icon: <SiGit />, label: "Git" },
-      { icon: <FaGithub />, label: "GitHub" },
-      { icon: <FaAws />, label: "AWS" },
-      { icon: <SiGooglecloud />, label: "GCP" },
     ],
   },
 ];
